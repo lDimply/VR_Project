@@ -1,0 +1,27 @@
+Hand grag la mas básica
+Ray interacción = seleccionar a la distancia
+Distance grab para agarrar el cubito
+Touch hand grab
+
+los cubos tienen el código grababble y un touch hand interactable rigiboddy mesh collider bound collider
+
+La idea es con hand tracking
+
+poke interaction = funciona como botón (solo funciona con hand tracking)
+
+---Presentacion--
+Explicar el por que de cada decisión
+Explicar como se vive la experiencia
+
+--UI---
+
+Event system -> pointable canvas mode -> crear canvas -> render mode -> world space -> agregar botón -> en el canvas -> pointable canvas y ray interactable
+point interactable = canvas -> Surface ->plane Surface
+
+-Optimizacion-
+
+Triz
+Draw calls (batches)
+profiler
+frame debugger
+camera.layerculldistance
