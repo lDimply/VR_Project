@@ -838,8 +838,10 @@ MonoBehaviour:
   rightHand: {fileID: 1907711758}
   rigTransform: {fileID: 450857795}
   xrCamera: {fileID: 320064872}
-  moveSpeed: 1.5
+  normalSpeed: 10
+  crouchSpeed: 0.5
   turnSpeed: 60
+  crouchThreshold: 1.2
 --- !u!1 &491303763
 GameObject:
   m_ObjectHideFlags: 0
