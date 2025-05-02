@@ -5,7 +5,7 @@ public class Cronometro : MonoBehaviour
     public static Cronometro Instancia;
 
     public float tiempoRestante = 300f; // 5 minutos en segundos
-    public bool estaCorriendo = true;
+    private bool estaCorriendo = false;
 
     private void Awake()
     {
@@ -18,6 +18,11 @@ public class Cronometro : MonoBehaviour
         {
             Destroy(gameObject); // Evita duplicados
         }
+    }
+
+    public void INICIAR_CRONOMETRO()
+    {
+        estaCorriendo =true;
     }
 
     private void Update()
