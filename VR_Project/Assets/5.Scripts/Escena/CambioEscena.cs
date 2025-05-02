@@ -1,19 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CambioEscena : MonoBehaviour
 {
+    public string sceneToLoad = "NombreDeTuEscena";
+    public Transform player; // Arrástralo desde el editor
+    private BoxCollider triggerArea;
 
-    public int numeroEscena;
-
-    private void OnTriggerEnter(Collider other)
+    void Start()
     {
-        if(other.tag == "Player")
-        { 
-            SceneManager.LoadScene(numeroEscena);
-        }
+        triggerArea = GetComponent<BoxCollider>();
+    }
 
+    void Update()
+    {
+        if (IsPlayerInside())
+        {
+            Debug.Log("Jugador dentro del área, cambiando escena...");
+            SceneManager.LoadScene(sceneToLoad);
+        }
+    }
+
+    private bool IsPlayerInside()
+    {
+        Vector3 localPos = transform.InverseTransformPoint(player.position);
+        return triggerArea.bounds.Contains(player.position);
     }
 }

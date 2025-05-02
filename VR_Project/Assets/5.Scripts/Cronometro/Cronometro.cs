@@ -5,7 +5,8 @@ public class Cronometro : MonoBehaviour
     public static Cronometro Instancia;
 
     public float tiempoRestante = 300f; // 5 minutos en segundos
-    private bool estaCorriendo = false;
+    public bool estaCorriendo = false;
+    public GameObject AudioExplicacion1;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class Cronometro : MonoBehaviour
     public void INICIAR_CRONOMETRO()
     {
         estaCorriendo =true;
+        AudioExplicacion1.SetActive(true);
     }
 
     private void Update()
